@@ -1,0 +1,13 @@
+CREATE TABLE Card (id INT UNSIGNED AUTO_INCREMENT, namespanish TEXT NOT NULL, nameenglish TEXT NOT NULL, cost INT UNSIGNED DEFAULT '0', cardid INT UNSIGNED DEFAULT '0' NOT NULL, state TEXT, stock INT UNSIGNED DEFAULT '0' NOT NULL, idexpansion INT UNSIGNED DEFAULT '0' NOT NULL, iddetails INT UNSIGNED DEFAULT '0', INDEX idexpansion_idx (idexpansion), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE Dispatch (id INT UNSIGNED, name TEXT NOT NULL, descripcion TEXT, cost INT UNSIGNED DEFAULT '0' NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE Expansion (id INT UNSIGNED AUTO_INCREMENT, name TEXT NOT NULL, abbreviation TEXT NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE Item (id INT UNSIGNED, number INT UNSIGNED DEFAULT '0' NOT NULL, idcard INT UNSIGNED DEFAULT '0' NOT NULL, idorder INT UNSIGNED DEFAULT '0' NOT NULL, INDEX idcard_idx (idcard), INDEX idorder_idx (idorder), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE Orders (id INT UNSIGNED AUTO_INCREMENT, created_at DATE NOT NULL, comment TEXT, iduser INT UNSIGNED DEFAULT '0' NOT NULL, idpaymenttype INT UNSIGNED DEFAULT '0' NOT NULL, iddispathtype INT UNSIGNED DEFAULT '0' NOT NULL, INDEX iddispathtype_idx (iddispathtype), INDEX idpaymenttype_idx (idpaymenttype), INDEX iduser_idx (iduser), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE Payment (id INT UNSIGNED, name TEXT NOT NULL, description TEXT, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE User (id INT UNSIGNED, user TEXT NOT NULL, password TEXT NOT NULL, name TEXT NOT NULL, surname TEXT NOT NULL, email TEXT NOT NULL, idaddress INT UNSIGNED DEFAULT '0', PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE Card ADD CONSTRAINT Card_idexpansion_Expansion_id FOREIGN KEY (idexpansion) REFERENCES Expansion(id);
+ALTER TABLE Item ADD CONSTRAINT Item_idorder_Orders_id FOREIGN KEY (idorder) REFERENCES Orders(id);
+ALTER TABLE Item ADD CONSTRAINT Item_idcard_Card_id FOREIGN KEY (idcard) REFERENCES Card(id);
+ALTER TABLE Orders ADD CONSTRAINT Orders_iduser_User_id FOREIGN KEY (iduser) REFERENCES User(id);
+ALTER TABLE Orders ADD CONSTRAINT Orders_idpaymenttype_Payment_id FOREIGN KEY (idpaymenttype) REFERENCES Payment(id);
+ALTER TABLE Orders ADD CONSTRAINT Orders_iddispathtype_Dispatch_id FOREIGN KEY (iddispathtype) REFERENCES Dispatch(id);
