@@ -12,71 +12,89 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.jobs
+.cards
 {
  width: 760px;
  margin: 0 auto;
 }
 
-.jobs tr.even
+.cards tr.even
 {
   background-color: #f3fafc;
 }
 
-.jobs tr.odd
+.cards tr.odd
 {
 }
 
-.jobs tr:hover
+.cards tr:hover
 {
   background-color: #fff;
 }
 
-.jobs td
+.cards td
 {
   padding: 12px 15px;
   border-bottom: 1px dotted #999;
 }
 
-.jobs td.position,
-.jobs td.location
+.cards td.default,
+.cards td.cardName
 {
   border-right: 1px dotted #999;
 }
 
-.jobs .location
+.cards .cardName
 {
   color: #524F46;
   font-weight: bold;
   width: 30%;
 }
 
-.jobs .company
+.cards .columnTitle
+{
+  color: #524F46;
+  font-weight: bold;
+  width: 30%;
+  text-align: center;
+}
+
+.cards .rowTitle
+{
+  color: #524F46;
+  font-weight: bold;
+  width: 30%;
+  height: 12px;
+  text-align: center;
+}
+
+.cards .data
 {
   color: #d2813f;
   width: 30%;
+  text-align: center;
 }
 
-.jobs .position
+.cards .default
 {
   padding: 0;
   color: #524F46;
   width: 40%;
 }
 
-.jobs .position a
+.cards .default a
 {
   padding: 12px 15px;
   display: block;
   text-decoration: none;
 }
 
-.jobs .position a:hover
+.cards .default a:hover
 {
   text-decoration: underline;
 }
 
-.more_jobs
+.more_cards
 {
   text-align: right;
   text-transform: uppercase;
@@ -85,7 +103,7 @@
   clear: both;
 }
 
-.more_jobs a
+.more_cards a
 {
   color: #176f94;
   text-decoration: none;
@@ -93,7 +111,7 @@
   font-size: 130%;
 }
 
-.more_jobs a:hover
+.more_cards a:hover
 {
   color: #176f94;
   text-decoration: underline;

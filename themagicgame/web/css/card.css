@@ -1,8 +1,8 @@
-#job h1
+#card h1
 {
 }
 
-#job h2
+#card h2
 {
   margin-top: -30px;
   font-size: 110%;
@@ -12,7 +12,7 @@
   color: #fff;
 }
 
-#job h3
+#card h3
 {
   font-size: 150%;
   margin: 15px 10px;
@@ -20,13 +20,13 @@
   font-weight: bold;
 }
 
-#job h3 small
+#card h3 small
 {
   font-size: 70%;
   color: #5d6162;
 }
 
-#job h4
+#card h4
 {
   font-size: 110%;
   margin: 20px 10px 7px;
@@ -34,8 +34,8 @@
   color: #176f94;
 }
 
-#job .description,
-#job p.how_to_apply
+#card .description,
+#card p.how_to_apply
 {
   font-size: 105%;
   line-height: 1.4em;
@@ -43,7 +43,7 @@
   color: #333;
 }
 
-#job .logo
+#card .logo
 {
   float: right;
   margin-bottom: 20px;
@@ -53,7 +53,7 @@
   background: #fff;
 }
 
-#job_actions
+#card_actions
 {
   margin: 3px 0;
   padding: 7px;
@@ -62,12 +62,12 @@
   list-style: none;
 }
 
-#job_actions ul
+#card_actions ul
 {
   display: inline;
 }
 
-#job_actions h3
+#card_actions h3
 {
   display: inline;
   font-weight: bold;
@@ -76,7 +76,7 @@
   background-color: #eee;
 }
 
-#job_actions li
+#card_actions li
 {
   display: inline;
   margin-right: 7px;

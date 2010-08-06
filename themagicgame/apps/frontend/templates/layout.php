@@ -3,7 +3,7 @@
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Jobeet - Your best job board</title>
+    <title>Buscador de cartas</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
@@ -12,20 +12,20 @@
     <div id="container">
       <div id="header">
         <div class="content">
-          <h1><a href="<?php echo url_for('job/index') ?>">
-            <img src="/images/logo.jpg" alt="Jobeet Job Board" />
+          <h1><a href="<?php echo url_for('card/index') ?>">
+            <img src="/images/logo.jpg" alt=">The Magic Game" />
           </a></h1>
  
           <div id="sub_header">
             <div class="post">
               <h2>Ask for people</h2>
               <div>
-                <a href="<?php echo url_for('job/index') ?>">Post a Job</a>
+                <a href="<?php echo url_for('card/index') ?>">Find a Card</a>
               </div>
             </div>
  
             <div class="search">
-              <h2>Ask for a job</h2>
+              <h2>Buscar carta</h2>
               <form action="" method="get">
                 <input type="text" name="keywords"
                   id="search_keywords" />
