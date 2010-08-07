@@ -186,7 +186,7 @@ body
   font-size: 90%;
   margin-bottom: 0px;
   height: 153px;
-  background: url(../images/bg-footer.jpg) repeat-x bottom;
+  #background: url(../images/footer/bg-footer.jpg) repeat-x bottom;
   padding-top: 10px;
   position: relative;
 }

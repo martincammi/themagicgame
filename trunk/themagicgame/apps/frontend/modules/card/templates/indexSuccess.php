@@ -1,34 +1,36 @@
 <h1>Cards List</h1>
 
-<table>
+<div id="cards">
+<table class="cards">
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Namespanish</th>
-      <th>Nameenglish</th>
-      <th>Cost</th>
-      <th>Cardid</th>
-      <th>State</th>
-      <th>Stock</th>
-      <th>Idexpansion</th>
-      <th>Iddetails</th>
+      <td class="columnTitle">Carta</td>
+      <td class="columnTitle">Precio</td>
+      <td class="columnTitle">Stock</td>
+      <td class="columnTitle">Idexpansion</td>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($cards as $card): ?>
-    <tr>
-      <td><a href="<?php echo url_for('card/show?id='.$card->getId()) ?>"><?php echo $card->getId() ?></a></td>
-      <td><?php echo $card->getNamespanish() ?></td>
-      <td><?php echo $card->getNameenglish() ?></td>
-      <td><?php echo $card->getCost() ?></td>
-      <td><?php echo $card->getCardid() ?></td>
-      <td><?php echo $card->getState() ?></td>
-      <td><?php echo $card->getStock() ?></td>
-      <td><?php echo $card->getIdexpansion() ?></td>
-      <td><?php echo $card->getIddetails() ?></td>
-    </tr>
+    <?php foreach ($cards as $i => $card): ?>
+      <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">
+	      <td class="cardName">
+			<a href="<?php echo url_for('card/show?id='.$card->getId()) ?>">
+			<?php echo $card->getNameenglish() ?>
+			<?php if($card->getState() != 'ok'){
+				  echo ' ('.$card->getState().')' ;
+                 	      }
+			?>
+	      </td>
+	      <td class="data">$ <?php echo $card->getCost() ?></td>
+	      <td class="data"><?php echo $card->getStock() ?></td>
+	      <td class="data"><?php echo $card->getIdexpansion() ?></td>
+      </tr>
     <?php endforeach; ?>
   </tbody>
 </table>
+</div>
+
+
+
 
   <a href="<?php echo url_for('card/new') ?>">New</a>

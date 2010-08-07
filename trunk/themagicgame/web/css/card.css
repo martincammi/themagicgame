@@ -1,5 +1,6 @@
 #card h1
 {
+
 }
 
 #card h2
@@ -43,14 +44,21 @@
   color: #333;
 }
 
-#card .logo
+#card .image
 {
-  float: right;
+  float: left;
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 10px;
   padding: 5px;
   background: #fff;
+  
+}
+
+#card .imageProp
+{
+  width: 230px;
+  height: 328px;
 }
 
 #card_actions
