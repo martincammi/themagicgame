@@ -60,10 +60,8 @@
       <div id="footer">
         <div class="content">
           <span class="symfony">
-            <img src="/images/jobeet-mini.png" />
-            powered by <a href="http://www.symfony-project.org/">
-            <img src="/images/symfony.gif" alt="symfony framework" />
-            </a>
+            Last release
+            <img src="/images/cards/M11/M11_mythic.gif" />
           </span>
           <ul>
             <li><a href="">About Jobeet</a></li>
