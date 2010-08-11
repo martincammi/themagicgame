@@ -1,0 +1,14 @@
+
+Routing
+http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+This file contains the definition of the routes in the application,
+it works the same as the struts-config.xml in struts.
+
+When a request comes in, the routing system tries to match a route to the incoming URL. 
+<<Important>>: The first route that matches wins!
+
+When the routing.yml configuration file is read,
+each route is converted to an object of class class
+
+ 
