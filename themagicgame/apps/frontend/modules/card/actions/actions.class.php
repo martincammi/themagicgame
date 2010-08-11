@@ -19,8 +19,21 @@ class cardActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->card = Doctrine::getTable('Card')->find(array($request->getParameter('id')));
+  	$this->card = CardTable::loadCard($request->getParameter('id'));
     $this->forward404Unless($this->card);
+    $this->expansion = Doctrine::getTable('Expansion')->find(array($this->card->getIdexpansion()));
+    
+    //$this->previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()));
+    $previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()-1));
+    $this->previousCard = $previousCard[0];
+
+    $nextCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()+1));
+    $this->nextCard = $nextCard[0]; 
+    
+    //$doctrine_query = Doctrine::getTable('Card')->createQuery('c')->where('c.cardid = ?', '$this->card->getICardid()');
+    //$array_cards = $doctrine_query->fetchArray();
+    //$this->previousCard = $array_cards[0]; 
+  	
   }
 
   public function executeNew(sfWebRequest $request)

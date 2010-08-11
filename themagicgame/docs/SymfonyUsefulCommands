@@ -1,0 +1,116 @@
+
+Notas:
+Los ejemplos usan la entidad "Card"
+Para ejecutar los comandos es necesario estar parado bajo el directorio
+del proyecto.
+
+configurar los datos de la base de datos (lo guarda en config/databases.yml)
+$ php symfony configure:database "mysql:host=localhost;dbname=localhost" magic magic
+
+Generar el esquema de la base (lo genera en config/doctrine/schema.yml)
+y seria como el .hbm.xml de hibernate, son los mapeos de objetos a la base
+$ php symfony doctrine:build-schema
+
+Generar el modelo de clases de php.
+$ php symfony doctrine:build --model
+
+Generar sql de INSERT para reconstruir la base (en data/sql/schema.sql)
+$ php symfony doctrine:build --sql
+
+Ejecuta sql de INSERT para reconstruir la base
+$ php symfony doctrine:insert-sql
+
+Carga los datos de prueba (los toma de los ubicados en data/fixtures/*.yml)
+$ php symfony doctrine:data-load
+
+Genera los archivos (data/fixtures/*.yml) con datos cargados de la base
+php symfony doctrine:data-dump
+
+Regenera todo el esquema de tablas y carga los datos de prueba.
+$ php symfony doctrine:build --all --and-load
+$ php symfony doctrine:build --all --no-confirmation
+$ php symfony doctrine:build --all --and-load --no-confirmation
+
+Generate models to update, delete, load objects from web (card es el nombre para la pagina y Card es la entidad)
+$ php symfony doctrine:generate-module --with-show --non-verbose-templates frontend card Card
+
+Para testear el modelo
+http://localhost/frontend_dev.php/card
+
+
+
+Summary Commands:
+
+$ symfony
+available pake tasks:
+  clear-cache                          > clear cached information
+  clear-controllers                    > clear controllers
+  disable                              > disables an application in a given environment
+  doctrine-build-all                   > Create database, generate models, insert sql
+  doctrine-build-all-load              > Create database, generate models, insert sql, and load data from fixtures.
+  doctrine-build-all-reload            > Drops database, creates database, generate models, and loads data from fixtures.
+  doctrine-build-all-reload-test-all   > Drops database, creates database, generate models, loads data from fixtures, and runs all tests.
+  doctrine-build-db                    > Create database
+  doctrine-build-model                 > Build all Doctrine records
+  doctrine-build-schema                > Build yaml schema from an existing database
+  doctrine-build-sql                   > Export sql for doctrine schemas to data/sql
+  doctrine-convert-schema              > Convert 0.1 schema to new Doctrine schema syntax
+  doctrine-dql                         > Execute dql from the command line
+  doctrine-drop-db                     > Drop database
+  doctrine-dump-data                   > Dump data to yaml fixtures file
+  doctrine-generate-crud               > Creates Doctrine CRUD Module
+  doctrine-generate-migration          > Generate migration class template
+  doctrine-generate-migrations-db      > Generate migration classes from databases
+  doctrine-generate-migrations-models  > Generate migration classes from models
+  doctrine-init-admin                  > Initialize a new doctrine admin module
+  doctrine-insert-sql                  > Insert sql for doctrine schemas in to database
+  doctrine-load-data                   > Load data from yaml fixtures file
+  doctrine-migrate                     > Migrate database to current version or a specified version.
+  doctrine-rebuild-db                  > Drop database and rebuild it
+  downgrade                            > downgrade to a previous symfony release
+  enable                               > enables an application in a given environment
+  fix-perms                            > fix directories permissions
+  freeze                               > freeze symfony libraries
+  init-app                             > initialize a new symfony application
+  init-batch                           > initialize a new symfony batch script
+  init-controller                      > initialize a new symfony controller script
+  init-module                          > initialize a new symfony module
+  init-project                         > initialize a new symfony project
+  log-purge                            > purges an applications log files
+  log-rotate                           > rotates an applications log files
+  plugin-install                       > install a new plugin
+  plugin-list                          > list installed plugins
+  plugin-uninstall                     > uninstall a plugin
+  plugin-upgrade                       > upgrade a plugin
+  propel-build-all                     > generate propel model and sql and initialize database
+  propel-build-all-load                > generate propel model and sql and initialize database, and load data
+  propel-build-db                      > create database for current model
+  propel-build-model                   > create classes for current model
+  propel-build-schema                  > create schema.xml from existing database
+  propel-build-sql                     > create sql for current model
+  propel-convert-xml-schema            > create schema.yml from schema.xml
+  propel-convert-yml-schema            > create schema.xml from schema.yml
+  propel-dump-data                     > dump data to fixtures directory
+  propel-generate-crud                 > generate a new propel CRUD module
+  propel-init-admin                    > initialize a new propel admin module
+  propel-init-crud                     > initialize a new propel CRUD module
+  propel-insert-sql                    > insert sql for current model
+  propel-load-data                     > load data from fixtures directory
+  sync                                 > synchronise project with another machine
+  test-all                             > launch all tests
+  test-functional                      > launch functional tests for an application
+  test-unit                            > launch unit tests
+  unfreeze                             > unfreeze symfony libraries
+  upgrade                              > upgrade to a new symfony release
+
+task aliases:
+  app                                  = pake init-app
+  batch                                = pake init-batch
+  cc                                   = pake clear-cache
+  controller                           = pake init-controller
+  module                               = pake init-module
+  new                                  = pake init-project
+
+
+
+

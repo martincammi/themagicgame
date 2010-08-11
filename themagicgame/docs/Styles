@@ -1,0 +1,25 @@
+
+
+functions
+
+include_stylesheets()
+	
+	The include_stylesheets() function is called a helper. It
+	generates <link> tags for stylesheets.
+	
+How does the helper know which stylesheets to include?
+
+	Use css's defined in the apps/frontend/config/view.yml
+	which has the default css's for all the application.
+	
+	You can define custom css for a particular page defining
+	the view.yml in your apps/frontend/modules/card/config/view.yml
+	
+	there are many configuracions:
+	1) The global -> for the project (in config/)
+	2) The local  -> for the application (in apps/APP/config/)
+	3) The local  -> restricted to a module (in apps/APP/modules/card/config/)
+	
+	You can define particular main.css e.j for a page adding:
+	<?php use_stylesheet('main.css') ?>
+  

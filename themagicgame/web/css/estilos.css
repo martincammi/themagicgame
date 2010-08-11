@@ -1,0 +1,98 @@
+@charset "utf-8";
+#body		{background-image:url(../imagenes/bg.jpg);background-color: #000000;background-repeat: no-repeat;margin: 0px;padding: 0px;}
+.clear 		{clear:both;}
+.ft  		{width:138px;height:112px;float:left;margin-right: 17px;border: 1px solid #000000;}
+.ft2 		{width:100px;height:80px;float:left;margin-right: 17px;}
+.ft3 		{width:63px;height:100px;float:left;margin-right: 15px;}
+.ft4 		{width:150px;margin-right: 17px;margin-bottom: 14px; margin-top:3px;border: 1px solid #000000;}
+.ft5		{filter:alpha(opacity=80);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;background-image: url(../imagenes/lupa.png);background-repeat: no-repeat;background-position:50% 50%;background-color: #000;}
+.ft6		{width:111px;height:140px;border:1px solid #000;margin-top: 3px;margin-bottom: 3px;}
+.ft7		{width:232px;border:1px solid #e1e1e1; margin-bottom:5px;}
+.ft8		{width:50px;height:50px; margin-right:7px;margin-top:5px;}
+.ft9		{filter:alpha(opacity=80);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;background-image: url(../imagenes/lupa2.png);background-repeat: no-repeat;background-position:50% 50%;background-color: #000;}
+.fr			{font-family: Arial, Helvetica, sans-serif;font-size: 13px;color: #fca25e;border:0px;background-color: #000000;line-height: 35px;height: 36px;margin-right: 10px;text-decoration:none;}
+.fr2 		{height: 20px;width: 350px;border: 1px solid #e1e1e1;}
+.fr3 		{height: 80px;width: 350px;border: 1px solid #e1e1e1;}
+.fr_com		{width: 615px;height:100px;border: 1px solid #d6d6d6;font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #222222;background-color: #fdfdfd;margin-bottom:10px;padding: 5px;}
+.fr_nom		{width: 150px;height:15px;border: 1px solid #d6d6d6;font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #222222;background-color: #fdfdfd;margin-bottom:10px;padding: 5px;}
+.bt 		{font-family: Arial, Helvetica, sans-serif;font-size: 12px;	color: #ffffff;border: 1px solid #444444;background-color:#000000;padding: 5px;}
+.bt:hover 	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;	color: #ffffff;border: 1px solid #fca10e;background-color:#fca25e;padding: 5px;}
+
+
+/* Estructura ****************************************/
+#cn 		{width: 897px;margin-right: auto;margin-left: auto;padding-left: 10px;background-image: url(../imagenes/bg-md.png);padding-top: 10px;padding-right: 10px;margin-bottom:20px;}
+#bn 		{margin-right: auto;margin-left: auto;text-align: center;padding-right: 5px;}
+#m1 		{width: 220px;float:left;}
+#m2 		{width: 649px;float:right;padding-left:20px;}
+#m3 		{width:320px;float:left;padding-right:9px;}
+#m4 		{width:320px;float:left;}
+#con		{background-image: url(../imagenes/consola.png);background-repeat: no-repeat;padding-left: 34px;line-height: 36px;height: 36px;width: 186px;}
+#con2		{background-image: url(../imagenes/consola2.png);background-repeat: no-repeat;padding-left: 12px;line-height: 36px;height: 36px;width: 637px;}
+#con3		{background-image: url(../imagenes/consola3.png);background-repeat: no-repeat;padding-left: 12px;line-height: 36px;height: 36px;width: 308px;}
+#con4		{background-image: url(../imagenes/mazos.png);background-repeat: no-repeat;padding-left: 12px;line-height: 36px;height: 70px;width: 637px;}
+#bx			{background-image: url(../imagenes/bg-menu.png);display:block;}
+#bx2		{background-image: url(../imagenes/bg-bx.png);display: block;padding: 10px;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #3D3329;}
+#bx2 ul 	{list-style-image: none;list-style-type: none;margin: 0px;padding: 0px;width: 400px;float: left;padding-top:10px;}
+#bx2 li 	{padding-top:0px;padding-right:0px;padding-bottom:5px;padding-left:30px;background-image:url(../imagenes/flecha.png);background-repeat: no-repeat;background-position: left;}
+#bx3		{width:112px;padding-right:15px;padding-bottom:15px;float:left;}
+#bx4		{width:250px;float:left;}
+#bx5		{float:left;width: 375px;}
+#bx6		{background-image: url(../imagenes/bg-bx.png);border-bottom-width:1px;border-bottom-style: solid;border-bottom-color: #3D3329;float:left;padding-top:10px;padding-bottom:10px;padding-left:10px;
+			 width:639px;}
+#barra		{overflow:auto;max-height:300px;scrollbar-face-color: #000;scrollbar-shadow-color: #5a5a5d;scrollbar-highlight-color: #5a5a5d;scrollbar-3dlight-color: #000;scrollbar-darkshadow-color: #000; scrollbar-track-color: #000;scrollbar-arrow-color: #5a5a5d;scrollbar-width: 5px;}
+
+
+/* Textos ****************************************/
+
+.tl 			{font-family:Arial, Helvetica, sans-serif;font-size: 14px;color:#fff;font-weight: bold;}
+.tl2			{font-family:Arial, Helvetica, sans-serif;font-size: 17px;color:#fff;text-decoration:none;}
+.tl2 a			{font-family:Arial, Helvetica, sans-serif;font-size: 17px;color:#fff;text-decoration:none;}
+.tl2 a:hover	{text-decoration:underline;color: #fca25e;}
+.tl3 			{font-family:Arial, Helvetica, sans-serif;font-size: 14px;color:#fff;text-decoration:none;}
+.tl3 a			{font-family:Arial, Helvetica, sans-serif;font-size: 14px;color:#fff;text-decoration:none;}
+.tl3 a:hover	{text-decoration:underline;color: #fca25e;}
+.tl4			{font-family:Arial, Helvetica, sans-serif;font-size: 15px;color:#fca25e;text-decoration:none;}
+.tl5			{font-family:Arial, Helvetica, sans-serif;font-size: 20px;color:#fca25e;text-decoration:none;}
+.tl6			{font-family:Arial, Helvetica, sans-serif;font-size: 13px;color:#fff;text-decoration:none;}
+.tl6 a			{font-family:Arial, Helvetica, sans-serif;font-size: 13px;color:#fff;text-decoration:none;}
+.tl6 a:hover	{text-decoration:underline;color: #fca25e;}
+.tl7			{font-family:Georgia;font-size: 16px;color:#fff;text-decoration:none;}
+.tx				{font-family:Arial, Helvetica, sans-serif;font-size: 12px;color:#a58f7a;}
+.tx2			{font-family:Arial;font-size: 11.5px;color:#33b5b5;text-decoration:none;font-weight: normal;}
+.tx2 a 			{font-family:Arial;font-size: 11.5px;color:#33b5b5;text-decoration:none;font-weight: normal;}
+.tx2 a:hover	{font-family:Arial;font-size: 11.5px;color:#33b5b5;text-decoration:underline;font-weight: normal;}
+.tx3			{font-family:Arial, Helvetica, sans-serif;font-size: 12px;color:#fca25e;}
+.tx4			{font-family:Tahoma;font-size: 12px;color:#fff;}
+.tx4 a			{color:#fff;text-decoration:none;}
+.tx4 a:hover	{color:#01b6e1;text-decoration:none;}
+
+
+
+/* Menu-2 ****************************************/
+
+.menu 			{WIDTH: 200px;margin: 0px;padding-top: 0px;padding-right: 10px;padding-bottom: 0px;padding-left: 10px;}
+.menu A 		{POSITION: relative;WIDTH: auto;DISPLAY: block;COLOR: #30b5b4;TEXT-DECORATION: none;background-image: url(../imagenes/arrow.png);background-repeat: no-repeat;font-family: "Edwarding Script ITC", "Trebuchet MS", Verdana, Helvetica, sans-serif;font-size: 13px;height: 20px;line-height: 20px;padding-left: 10px;}
+.menu A:hover 	{color: #a58f7a;TEXT-DECORATION: none;background-image: url(../imagenes/arrow2.png);background-repeat: no-repeat;cursor: pointer;}
+
+/********** footer **********/
+.footer {margin:0;padding:0;background-image: url(../imagenes/bg-footer.png);}
+.footer_resize {width:920px;) top center no-repeat;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;padding-top: 19px;	padding-right: 0;padding-bottom: 19px;padding-left: 0;}
+.footer ul { width:283px;margin:0;list-style:none;float:right;}
+.footer ul li { margin:0; padding-left:10px;float:left;}
+.footer p {margin:0;float:left;color:#bcbcbc;font:normal 11px Arial, Helvetica, sans-serif;}
+.footer a {color:#bcbcbc; font:normal 11px Tahoma, Geneva, sans-serif; text-decoration:none; line-height:1.8em;}
+.footer a:hover {color:#fca25e;}
+
+
+/*** Paginado ****/
+div.pag {font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+div.pag a {border: 1px solid #3D3329;text-decoration: none;color:#fff;margin-right:3px;text-align:center;width:20px;float: left;background-color: #000;}
+div.pag a:hover, div.pag a:active {border: 1px solid #fca25e;background-image:none;background-color:#000;color: #fff;}
+div.pag a.next{border:1px solid #3D3329;margin-left: 10px;width: 60px;}
+div.pag a.next:hover{border:1px solid #fca25e;}
+div.pag a.prev{border:1px solid #000;margin-right: 10px;width: 60px;}
+div.pag a.prev:hover{border:1px solid #000;}
+.numero {border: 1px solid #fca25e;text-decoration: none;color: #fff;margin-right: 3px;background-color: #000;float: left;width: 20px;text-align: center;}
+
+
+

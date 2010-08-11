@@ -39,23 +39,35 @@
         </div>
       </div>
  
-      <div id="content">
-        <?php if ($sf_user->hasFlash('notice')): ?>
-          <div class="flash_notice">
-            <?php echo $sf_user->getFlash('notice') ?>
-          </div>
-        <?php endif ?>
- 
-        <?php if ($sf_user->hasFlash('error')): ?>
-          <div class="flash_error">
-            <?php echo $sf_user->getFlash('error') ?>
-          </div>
-        <?php endif ?>
- 
-        <div class="content">
-          <?php echo $sf_content ?>
-        </div>
-      </div>
+      
+     <div id="mainPage">
+       	<div id="menu">
+       		<li>menu1</li>
+       		<li>menu2</li>
+       		<li>menu3</li>
+       		<li>menu4</li>
+       		<li>menu5</li>
+       	</div>
+       	<div id="page">
+       		<div id="content">
+	       		<?php if ($sf_user->hasFlash('notice')): ?>
+		          <div class="flash_notice">
+		            <?php echo $sf_user->getFlash('notice') ?>
+		          </div>
+		        <?php endif ?>
+		 
+		        <?php if ($sf_user->hasFlash('error')): ?>
+		          <div class="flash_error">
+		            <?php echo $sf_user->getFlash('error') ?>
+		          </div>
+		        <?php endif ?>
+		 
+		        <div class="content">
+		          <?php echo $sf_content ?>
+		        </div>
+       		</div>
+      	</div>
+	 </div>
  
       <div id="footer">
         <div class="content">

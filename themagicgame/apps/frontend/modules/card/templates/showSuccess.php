@@ -7,10 +7,15 @@
   &nbsp;
   <a href="<?php echo url_for('card/show?id='.$previousCard->getId()) ?>">
   	   <?php echo $previousCard->getNameenglish() ?>
-  </a> <-
+  </a>
   </h1>
+  <h3>
+  <a href="<?php echo url_for('card/list') ?>">
+      Todas las cartas
+    </a>
+  </h3>
   <h2>
-  	&nbsp; ->
+  	&nbsp;
   	<a href="<?php echo url_for('card/show?id='.$nextCard->getId()) ?>">
   		<?php echo $nextCard->getNameenglish() ?>
   	</a>	
@@ -21,32 +26,53 @@
   </h3>
   
   <div>
-  <div class="image">
-     <a href="<?php echo $expansion->getName() ?>">
-       <img class="imageProp" src="/images/cards/<?php echo $expansion->getAbbreviation() ?>/<?php echo $card->getCardid() ?>.jpg"
-         alt="<?php echo $expansion->getName() ?>" />
-     </a>
+  <div class="row">
+	  <div class="image">
+	     <a href="<?php echo $card->getExpansion()->getName() ?>">
+	       <img class="imageProp" src="/images/cards/<?php echo $card->getExpansion()->getAbbreviation() ?>/<?php echo $card->getCardid() ?>.jpg"
+	         alt="<?php echo $expansion->getName() ?>" />
+	     </a>
+	   </div>
+	   
+	   <div class="title">
+  		  <?php echo $card->getNameEnglish() ?>
+  	   </div>
+  	   <div class="row">
+  	   		<div class="formLabel">Set:</div>
+  			<div class="formData">
+  	  			<?php echo $card->getExpansion()->getName() ?>
+  			</div>
+  		</div>
+  		
+  		<div class="row">
+  	   		<div class="formLabel">Rarity:</div>
+  			<div class="formData">
+  	  			Rare
+  			</div>
+  		</div>
+  		
+  		<div class="row">
+  	   		<div class="formLabel">Precio:</div>
+  			<div class="formCost">
+  	  			$ <?php echo $card->getCost() ?>
+  			</div>
+  		</div>
+  		
+  		<div class="row">
+  	   		<div class="formLabel">Stock: </div>
+  			<div class="formData">
+  				<?php echo $card->getStock() ?>
+  			</div>
+  		</div>
+  		
+  		<div class="row">
+  	   		<div class="formLabel">Card Text:</div>
+  			<div class="formData">
+  	  			Aca va la descripción
+  			</div>
+  		</div>
    </div>
    
-  <h4><?php echo $card->getNameEnglish() ?></h4>
-  
-  <div class="description">
-  	  Set: <?php echo $expansion->getName() ?>
-  </div>
-  
-  <div class="description">
-  	Desciopcion: detalle de la carta
-    <?php //simple_format_text($card->getDescription()) ?>
-  </div>
- 
-  <div class="description">
-    Precio: $<?php echo $card->getCost() ?>
-  </div>
-  
-  <div class="description">
-    Stock: <?php echo $card->getStock() ?>
-  </div>
- 
   <div style="padding: 20px 0">
     <!--<a href="<?php echo url_for('card/edit?id='.$card->getId()) ?>">
       Edit

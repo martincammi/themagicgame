@@ -35,6 +35,14 @@
   color: #176f94;
 }
 
+#card .title
+{
+  font-size: 110%;
+  margin: 20px 10px 7px;
+  font-weight: bold;
+  color: #176f94;
+}
+
 #card .description,
 #card p.how_to_apply
 {
@@ -95,7 +103,35 @@
   color: red;
 }
 
+.row {
+	margin:5px 0px;
+}
 
+.formLabel {
+	color:#333333;
+	float:left;
+	font-size:12px;
+	text-align:left;
+	width:100px;
+	margin-right: 3px;
+}
+
+.formData {
+	color:#333333;
+	font-size:12px;
+	margin-left:180px;
+	text-align:left;
+	clear: right;
+}
+
+.formCost {
+	color:navy;
+	font-size:15px;
+	margin-left:180px;
+	text-align:left;
+	clear: right;
+	font-weight: bold;
+}
 
 .meta
 {
