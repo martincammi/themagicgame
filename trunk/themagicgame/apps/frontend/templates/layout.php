@@ -1,88 +1,117 @@
 <!-- apps/frontend/templates/layout.php -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <title>Buscador de cartas</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <?php include_javascripts() ?>
-    <?php include_stylesheets() ?>
-  </head>
-  <body>
-    <div id="container">
-      <div id="header">
-        <div class="content">
-          <h1><a href="<?php echo url_for('card/index') ?>">
-            <img src="/images/logo.jpg" alt=">The Magic Game" />
-          </a></h1>
- 
-          <div id="sub_header">
-            <div class="post">
-              <h2>Ask for people</h2>
-              <div>
-                <a href="<?php echo url_for('card/index') ?>">Find a Card</a>
-              </div>
-            </div>
- 
-            <div class="search">
-              <h2>Buscar carta</h2>
-              <form action="" method="get">
-                <input type="text" name="keywords"
-                  id="search_keywords" />
-                <input type="submit" value="search" />
-                <div class="help">
-                  Enter some keywords (city, country, position, ...)
-                </div>
-              </form>
-            </div>
+	<head>
+		<title>Buscador de cartas</title>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<?php include_javascripts() ?>
+		<?php include_stylesheets() ?>
+	</head>
+
+<body>
+	<div id="bn">
+			<?php include_once "buscador/buscador.php"; ?>
+	</div>
+	
+	<div id="cn">
+		<div id="m1"><!--reportes-->
+			<div class="tl" id="con">Cartas</div>
+	<div id="bx">
+		<div class="menu">
+			<a href="" class="menu">M11</a>
+			<a href="" class="menu">Rise of Eldrazi</a>
+			<a href="" class="menu">Worldwake</a>
+			<a href="" class="menu">Zendikar</a>
+			<a href="" class="menu">M10</a>
+			<a href="" class="menu">Listado de Cartas en stock</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div style="padding-bottom: 10px;"><img src="imagenes/bt-bx.png"></div>
+	
+	<div class="tl" id="con">Accesorios</div>
+	<div id="bx">
+		<div class="menu">
+				<a href="" class="menu">PortFolios</a> 
+				<a href="" class="menu">Protectores</a>
+				<a href="" class="menu">Card Decks</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div style="padding-bottom: 10px;"><img src="imagenes/bt-bx.png"></div>
+	
+	<div class="tl" id="con">Envios</div>
+	
+	<div id="bx">
+		<div class="menu">
+			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Capital Federal</a>
+			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Interior del Pais</a>
+			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Capital Federal</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div style="padding-bottom: 10px;"><img src="imagenes/bt-bx.png"></div>
+	
+	<div class="clear"></div>
+	</div>
+	<!--carrito-->
+	<div id="m2">
+	<div id="content">
+        <?php if ($sf_user->hasFlash('notice')): ?>
+          <div class="flash_notice">
+            <?php echo $sf_user->getFlash('notice') ?>
           </div>
-        </div>
-      </div>
+        <?php endif ?>
  
-      
-     <div id="mainPage">
-       	<div id="menu">
-       		<li>menu1</li>
-       		<li>menu2</li>
-       		<li>menu3</li>
-       		<li>menu4</li>
-       		<li>menu5</li>
-       	</div>
-       	<div id="page">
-       		<div id="content">
-	       		<?php if ($sf_user->hasFlash('notice')): ?>
-		          <div class="flash_notice">
-		            <?php echo $sf_user->getFlash('notice') ?>
-		          </div>
-		        <?php endif ?>
-		 
-		        <?php if ($sf_user->hasFlash('error')): ?>
-		          <div class="flash_error">
-		            <?php echo $sf_user->getFlash('error') ?>
-		          </div>
-		        <?php endif ?>
-		 
-		        <div class="content">
-		          <?php echo $sf_content ?>
-		        </div>
-       		</div>
-      	</div>
-	 </div>
+        <?php if ($sf_user->hasFlash('error')): ?>
+          <div class="flash_error">
+            <?php echo $sf_user->getFlash('error') ?>
+          </div>
+        <?php endif ?>
  
-      <div id="footer">
         <div class="content">
-          <span class="symfony">
-            Last release
-            <img src="/images/cards/M11/M11_mythic.gif" />
-          </span>
-          <ul>
-            <li><a href="">About Jobeet</a></li>
-            <li class="feed"><a href="">Full feed</a></li>
-            <li><a href="">Jobeet API</a></li>
-            <li class="last"><a href="">Affiliates</a></li>
-          </ul>
+          <?php echo $sf_content ?>
         </div>
       </div>
-    </div>
-  </body>
+	</div>
+	<!--/carrito-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="clear"></div>
+	</div>
+	<!--/estandar-->
+	
+	
+	<div class="clear"></div>
+	
+	
+	
+	<!--footer-->
+	<div class="footer">
+		<div class="footer_resize">
+			<ul>
+				<li><a href="">INICIO</a></li>
+				<li><a href="list.php">Listado de Cartas</a></li>
+				<li><a href="index-2.php">Envíos</a></li>
+				<li><a href="contactenos.php">Contáctanos</a></li>
+			</ul>
+			<p>TheMagicGame</p>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!--//footer-->
+
+</body>
+
+
 </html>

@@ -12,6 +12,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .cards
 {
  width: 660px;
@@ -53,9 +54,11 @@
 
 .cards .columnTitle
 {
-  color: #524F46;
+  color: #021d38;
+  font-size: 12px;
   font-weight: bold;
-  width: 30%;
+  #width: 10px;
+  height: 2px;
   text-align: center;
 }
 

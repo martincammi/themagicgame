@@ -1,0 +1,62 @@
+Card:
+  Card_1:
+    namespanish: 'Golondrina del firmamento'
+    nameenglish: 'Welkin Tern'
+    cost: '2'
+    cardid: '76'
+    state: fine
+    stock: '1'
+    Expansion: Expansion_1
+    iddetails: '0'
+  Card_2:
+    namespanish: 'Mordida de vampiro'
+    nameenglish: 'Vampire''s Bite'
+    cost: '1'
+    cardid: '117'
+    state: ok
+    stock: '2'
+    Expansion: Expansion_1
+    iddetails: '0'
+  Card_3:
+    namespanish: 'Vampiro de Guul Draz'
+    nameenglish: 'Guul Draz Vampire'
+    cost: '2'
+    cardid: '93'
+    state: ok
+    stock: '2'
+    Expansion: Expansion_1
+    iddetails: '0'
+  Card_4:
+    namespanish: 'Espadachina despiadada'
+    nameenglish: 'Ruthless Cullblade'
+    cost: '2'
+    cardid: '65'
+    state: ok
+    stock: '2'
+    Expansion: Expansion_2
+    iddetails: '0'
+  Card_5:
+    namespanish: 'Espectro de Guul Draz'
+    nameenglish: 'Guul Draz Specter'
+    cost: '5'
+    cardid: '92'
+    state: ok
+    stock: '1'
+    Expansion: Expansion_1
+    iddetails: null
+Expansion:
+  Expansion_1:
+    name: Zendikar
+    abbreviation: ZEN
+  Expansion_2:
+    name: Worldwake
+    abbreviation: WWK
+  Expansion_3:
+    name: 'Rise of Eldrazi'
+    abbreviation: ROE
+  Expansion_4:
+    name: M10
+    abbreviation: M10
+  Expansion_5:
+    name: M11
+    abbreviation: M11

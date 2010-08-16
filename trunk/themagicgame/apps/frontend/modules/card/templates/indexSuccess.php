@@ -2,14 +2,12 @@
 
 <div id="cards">
 <table class="cards">
-  <thead>
-    <tr>
-      <td class="columnTitle">Carta</td>
-      <td class="columnTitle">Precio</td>
-      <td class="columnTitle">Stock</td>
-      <td class="columnTitle">Idexpansion</td>
-    </tr>
-  </thead>
+  <tr height="5">
+    <td height="5" class="columnTitle">Carta</td>
+    <td height="5" class="columnTitle">Precio</td>
+    <td height="5" class="columnTitle">Stock</td>
+  	<td height="5" class="columnTitle">Idexpansion</td>
+  </tr>
   <tbody>
     <?php foreach ($cards as $i => $card): ?>
       <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">

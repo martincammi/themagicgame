@@ -1,0 +1,17 @@
+address, blockquote, h1, h2, h3, h4, h5, h6, p, pre
+{
+    -moz-outline: 1px solid #ff0000 !important;
+    outline: 1px solid #ff0000 !important;
+}
+
+dd, dl, dt, ol, ul
+{
+    -moz-outline: 1px solid #00ff00 !important;
+    outline: 1px solid #00ff00 !important;
+}
+
+div, form, table
+{
+    -moz-outline: 1px solid #0000ff !important;
+    outline: 1px solid #0000ff !important;
+}
