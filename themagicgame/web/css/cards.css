@@ -1,41 +1,33 @@
-.category .feed
-{
+.category .feed{
   margin: 4px 15px;
   float: right;
   line-height: 25px;
   background-position: left center;
 }
 
-.category .feed a
-{
+.category .feed a{
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.cards
-{
+.cards{
  width: 660px;
  margin: 0 ;
 }
 
-.cards tr.even
-{
-  background-color: #f3fafc;
+.cards tr.even{
+  background:none repeat scroll 0 0 #021D38; 
+  opacity:0.6;
 }
 
-.cards tr.odd
-{
+.cards tr.odd{
+  background:none repeat scroll 0 0 #021D38; 
+  opacity:0.4;
 }
 
-.cards tr:hover
-{
-  background-color: #fff;
-}
-
-.cards td
-{
-  padding: 12px 15px;
+.cards td{
+  padding: 5px 15px;
   border-bottom: 1px dotted #999;
 }
 
@@ -52,13 +44,12 @@
   width: 30%;
 }
 
-.cards .columnTitle
+.cards .title
 {
   color: #021d38;
   font-size: 12px;
   font-weight: bold;
-  #width: 10px;
-  height: 2px;
+  width: 10px;
   text-align: center;
 }
 
@@ -95,6 +86,15 @@
 .cards .default a:hover
 {
   text-decoration: underline;
+}
+
+.cardName a {
+	color: #5340b3;
+	opacity:100!important;
+	font-size: 13px;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 10px;
 }
 
 .more_cards

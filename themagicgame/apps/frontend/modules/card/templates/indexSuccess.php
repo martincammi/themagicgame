@@ -2,11 +2,11 @@
 
 <div id="cards">
 <table class="cards">
-  <tr height="5">
-    <td height="5" class="columnTitle">Carta</td>
-    <td height="5" class="columnTitle">Precio</td>
-    <td height="5" class="columnTitle">Stock</td>
-  	<td height="5" class="columnTitle">Idexpansion</td>
+  <tr class="title">
+    <td>Carta</td>
+    <td>Precio</td>
+    <td>Stock</td>
+  	<td>Idexpansion</td>
   </tr>
   <tbody>
     <?php foreach ($cards as $i => $card): ?>
