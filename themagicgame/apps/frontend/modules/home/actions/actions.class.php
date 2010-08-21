@@ -8,26 +8,12 @@
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class cardActions extends sfActions
+class homeActions extends sfActions
 {
-  public function executeIndex(sfWebRequest $request)
-  {
-  	$abbreviationName = $request->getParameter('expansion');
-  	$rarity = $request->getParameter('rarity');
-  	
-  	$expansion = Doctrine::getTable('Expansion')->findByAbbreviation(array($abbreviationName));
-  	$this->expansion = $expansion[0];
-  	
-  	$Idexpansion = $expansion[0]->getId();
-  	
-    $this->cards = Doctrine::getTable('Card')
-      ->createQuery('c')
-      ->where('c.idExpansion = ?',$Idexpansion)
-      ->execute();
+  public function executeIndex(sfWebRequest $request){
+      
   }
 
-  
-  
   public function executeShow(sfWebRequest $request)
   {
   	$this->card = CardTable::loadCard($request->getParameter('id'));

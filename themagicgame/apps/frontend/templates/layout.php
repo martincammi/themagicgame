@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<title>Buscador de cartas</title>
+		<title>The Time of Game - Magic Cards</title>
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<?php include_javascripts() ?>
 		<?php include_stylesheets() ?>
@@ -23,7 +23,7 @@
 			<a href="" class="menu">Worldwake</a>
 			<a href="" class="menu">Zendikar</a>
 			<a href="" class="menu">M10</a>
-			<a href="" class="menu">Listado de Cartas en stock</a>
+			<a href="" class="menu">Bajo encargo</a>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -47,7 +47,6 @@
 		<div class="menu">
 			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Capital Federal</a>
 			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Interior del Pais</a>
-			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Capital Federal</a>
 		</div>
 		<div class="clear"></div>
 	</div>
