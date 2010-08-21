@@ -1,4 +1,4 @@
-<h1>Cards List</h1>
+<h1>Cards List (<?php echo $expansion->getName(); ?>)</h1>
 
 <div id="cards">
 <table class="cards">
@@ -22,6 +22,7 @@
 	      <td class="data">$ <?php echo $card->getCost() ?></td>
 	      <td class="data"><?php echo $card->getStock() ?></td>
 	      <td class="data"><?php echo $card->getIdexpansion() ?></td>
+	      
       </tr>
     <?php endforeach; ?>
   </tbody>

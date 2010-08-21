@@ -19,7 +19,7 @@ function changeTab(link){
 		<div class="taringa-search">
 			<div class="taringa-bar">
 				<ul class="search-options"  style="height:27px;	margin:0 auto;	padding:0;	width:610px;">
-					<li class="active"><a href="" onclick="changeTab( this); return false">Home</a></li>
+					<li class="active"><a href="/frontend_dev.php/" onclick="changeTab( this);">Home</a></li>
 					<li><a href="" onclick="changeTab(this); return false">Listados</a></li>
 					<li><a href="" onclick="changeTab(this); return false">Sets</a></li>
 					<li id="logo"></li>
@@ -28,7 +28,7 @@ function changeTab(link){
 
 			<div class="search clearfix">
 				<div class="search-box">
-					<form class="clearfix" id="search-box" style="padding:0;margin:0" action="/posts" method="GET" onsubmit="window.search.onsubmit()">
+					<form class="clearfix" id="search-box" style="padding:0;margin:0" action="/posts" method="get" onsubmit="window.search.onsubmit()">
 						<div class="input-left"></div>			
 						<input type="text" class="sinput" id="searchBox" >
 						<div class="input-right"></div>
@@ -36,16 +36,24 @@ function changeTab(link){
 							<a href="ACCION:BuscarCarta"></a>
 						</div>
 					</form>
-					<div>
-							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">M10</a>
+					<ul class="search-btn-option">
+						<li><a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">M10</a>
+					</li>
+					<li>
 							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">Zendikar</a>
+					</li>
+					<li>
 							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">WorldWake</a>
+					</li>
+					<li>
 							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">Rise of Eldrazi</a>
+					</li>
+					<li>
 							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">M11</a>
-					</div>
+					</li>
 					<script type="text/javascript">$('searchBoxform[name="search"] input[name="search"]').focus();</script>
 					<div class="clearBoth"></div>
-				</div>
+				</ul>
 			</div>
 		
 		</div>
