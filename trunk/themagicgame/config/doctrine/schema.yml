@@ -45,6 +45,13 @@ Card:
       primary: false
       notnull: false
       autoincrement: false
+    rarity:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
     stock:
       type: integer(4)
       fixed: false

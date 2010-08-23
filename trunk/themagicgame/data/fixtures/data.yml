@@ -43,7 +43,34 @@ Card:
     state: ok
     stock: '1'
     Expansion: Expansion_1
-    iddetails: null
+    iddetails: '0'
+  Card_6:
+    namespanish: Exponer
+    nameenglish: 'Lay Bare'
+    cost: '1'
+    cardid: '74'
+    state: ok
+    stock: '1'
+    Expansion: Expansion_3
+    iddetails: '0'
+  Card_7:
+    namespanish: 'Descubrimiento compartido'
+    nameenglish: 'Shared Discovery'
+    cost: '1'
+    cardid: '87'
+    state: ok
+    stock: '1'
+    Expansion: Expansion_3
+    iddetails: '0'
+  Card_8:
+    namespanish: 'Ver más allá'
+    nameenglish: 'See Beyond'
+    cost: '1'
+    cardid: '86'
+    state: ok
+    stock: '1'
+    Expansion: Expansion_3
+    iddetails: '0'
 Expansion:
   Expansion_1:
     name: Zendikar

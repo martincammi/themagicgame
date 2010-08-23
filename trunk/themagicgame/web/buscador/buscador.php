@@ -13,6 +13,11 @@ function changeTab(link){
 	$('form[name="search-box"] input[name="search"]').focus();
 	$('.search-btn-option').show();
 }
+
+function submitMe(){
+	$('search-box').submit();
+}
+
 </script>
 
 	<div id="wrapper">
@@ -28,12 +33,12 @@ function changeTab(link){
 
 			<div class="search clearfix">
 				<div class="search-box">
-					<form class="clearfix" id="search-box" style="padding:0;margin:0" action="/posts" method="get" onsubmit="window.search.onsubmit()">
+					<form class="clearfix" id="search-box" style="padding:0;margin:0" action="/frontend_dev.php/card/index" method="get" onsubmit="window.search.onsubmit()">
 						<div class="input-left"></div>			
 						<input type="text" class="sinput" id="searchBox" >
 						<div class="input-right"></div>
 						<div class="btn-search floatL">
-							<a href="ACCION:BuscarCarta"></a>
+							<a href="algo"></a>
 						</div>
 					</form>
 					<ul class="search-btn-option">
