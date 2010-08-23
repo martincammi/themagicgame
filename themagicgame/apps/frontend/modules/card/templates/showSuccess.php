@@ -8,12 +8,9 @@
   <a href="<?php echo url_for('card/show?id='.$previousCard->getId()) ?>">
   	   <?php echo $previousCard->getNameenglish() ?>
   </a>
+  Todas las cartas
   </h1>
-  <h3>
-  <a href="<?php echo url_for('card/list') ?>">
-      Todas las cartas
-    </a>
-  </h3>
+  
   <h2>
   	&nbsp;
   	<a href="<?php echo url_for('card/show?id='.$nextCard->getId()) ?>">
@@ -26,50 +23,53 @@
   </h3>
   
   <div>
-  <div class="row">
+  <div class="cardDescription">
 	  <div class="image">
-	     <a href="<?php echo $card->getExpansion()->getName() ?>">
+	     <a href="<?php echo url_for('card/index?expansion='.$card->getExpansion()->getAbbreviation()) ?>">
 	       <img class="imageProp" src="/images/cards/<?php echo $card->getExpansion()->getAbbreviation() ?>/<?php echo $card->getCardid() ?>.jpg"
 	         alt="<?php echo $expansion->getName() ?>" />
 	     </a>
 	   </div>
 	   
-	   <div class="title">
-  		  <?php echo $card->getNameEnglish() ?>
-  	   </div>
-  	   <div class="row">
-  	   		<div class="formLabel">Set:</div>
-  			<div class="formData">
-  	  			<?php echo $card->getExpansion()->getName() ?>
-  			</div>
-  		</div>
-  		
-  		<div class="row">
-  	   		<div class="formLabel">Rarity:</div>
-  			<div class="formData">
-  	  			Rare
-  			</div>
-  		</div>
-  		
-  		<div class="row">
-  	   		<div class="formLabel">Precio:</div>
-  			<div class="formCost">
-  	  			$ <?php echo $card->getCost() ?>
-  			</div>
-  		</div>
-  		
-  		<div class="row">
-  	   		<div class="formLabel">Stock: </div>
-  			<div class="formData">
-  				<?php echo $card->getStock() ?>
-  			</div>
-  		</div>
-  		
-  		<div class="row">
-  	   		<div class="formLabel">Card Text:</div>
-  			<div class="formData">
-  	  			Aca va la descripción
-  			</div>
+	   <div class="cardDetails">
+		   <div class="cardName">
+	  		  <?php echo $card->getNameSpanish() ?> 
+	  	   </div>
+	  	   
+	  	   <div class="row">
+	  	   		<div class="formLabel">Set:</div>
+	  			<div class="formData">
+	  	  			<?php echo $card->getExpansion()->getName() ?>
+	  			</div>
+	  		</div>
+	  		
+	  		<div class="row">
+	  	   		<div class="formLabel">Rarity:</div>
+	  			<div class="formData">
+	  	  			<?php echo $card->getRarity() ?>
+	  			</div>
+	  		</div>
+	  		
+	  		<div class="row">
+	  	   		<div class="formLabel">Precio:</div>
+	  			<div class="formCost">
+	  	  			$<?php echo $card->getCost() ?>
+	  			</div>
+	  		</div>
+	  		
+	  		<div class="row">
+	  	   		<div class="formLabel">Stock: </div>
+	  			<div class="formData">
+	  				<?php echo $card->getStock() ?>
+	  			</div>
+	  		</div>
+	  		
+	  		<div class="row">
+	  	   		<div class="formLabel">Card Text:</div>
+	  			<div class="formData">
+	  	  			Aca va la descripción
+	  			</div>
+	  		</div>
   		</div>
    </div>
    

@@ -18,11 +18,11 @@
 			<div class="tl" id="con">Cartas</div>
 	<div id="bx">
 		<div class="menu">
-			<a href="" class="menu">M11</a>
-			<a href="" class="menu">Rise of Eldrazi</a>
-			<a href="" class="menu">Worldwake</a>
-			<a href="" class="menu">Zendikar</a>
-			<a href="" class="menu">M10</a>
+			<a href="<?php echo url_for('card/index?expansion=M11') ?>" class="menu">M11</a>
+			<a href="<?php echo url_for('card/index?expansion=ROE') ?>" class="menu">Rise of Eldrazi</a>
+			<a href="<?php echo url_for('card/index?expansion=WWK') ?>" class="menu">Worldwake</a>
+			<a href="<?php echo url_for('card/index?expansion=ZEN') ?>" class="menu">Zendikar</a>
+			<a href="<?php echo url_for('card/index?expansion=M10') ?>" class="menu">M10</a>
 			<a href="" class="menu">Bajo encargo</a>
 		</div>
 		<div class="clear"></div>
@@ -39,19 +39,19 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-	<div style="padding-bottom: 10px;"><img src="imagenes/bt-bx.png"></div>
+	<div style="padding-bottom: 10px;"></div>
 	
 	<div class="tl" id="con">Envios</div>
 	
 	<div id="bx">
 		<div class="menu">
-			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Capital Federal</a>
-			<a href="catalogo.php?seccion=coberturas&amp;area=notas" class="menu">Interior del Pais</a>
+			<a href="" class="menu">Capital Federal</a>
+			<a href="" class="menu">Interior del Pais</a>
 		</div>
 		<div class="clear"></div>
 	</div>
 	
-	<div style="padding-bottom: 10px;"><img src="imagenes/bt-bx.png"></div>
+	<div style="padding-bottom: 10px;"></div>
 	
 	<div class="clear"></div>
 	</div>
