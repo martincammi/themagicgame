@@ -12,21 +12,33 @@ class cardActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-  	$abbreviationName = $request->getParameter('expansion');
-  	$rarity = $request->getParameter('rarity');
-  	
-  	$expansion = Doctrine::getTable('Expansion')->findByAbbreviation(array($abbreviationName));
-  	$this->expansion = $expansion[0];
-  	
-  	$Idexpansion = $expansion[0]->getId();
-  	
-    $this->cards = Doctrine::getTable('Card')
-      ->createQuery('c')
-      ->where('c.idExpansion = ?',$Idexpansion)
-      ->execute();
+  	$searchedText = $request->getParameter('searchBox');
+  	$searchedText = 'a';
+  	$this->searchedText = $request->getParameter('searchBox');
+  	/*if($searchedText != null || $searchedText != ''){
+    
+    	$this->cards = Doctrine::getTable('Card')
+      		->createQuery('c')
+      		->where('c.namespanish like ?','%'.$searchedText.'%')
+      		->orWhere('c.nameenglish like ?','%'.$searchedText.'%')
+      		->execute();
+  	}else{*/
+  		
+	  	$abbreviationName = $request->getParameter('expansion');
+	  	$rarity = $request->getParameter('rarity');
+	  	
+	  	$expansion = Doctrine::getTable('Expansion')->findByAbbreviation(array($abbreviationName));
+	  	$this->expansion = $expansion[0];
+	  	
+	  	$Idexpansion = $expansion[0]->getId();
+	  	
+	    $this->cards = Doctrine::getTable('Card')
+	      ->createQuery('c')
+	      ->where('c.idExpansion = ?',$Idexpansion)
+	      ->execute();
+  	/*}*/
   }
 
-  
   
   public function executeShow(sfWebRequest $request)
   {
@@ -45,6 +57,17 @@ class cardActions extends sfActions
     //$array_cards = $doctrine_query->fetchArray();
     //$this->previousCard = $array_cards[0]; 
   	
+  }
+  
+  public function executeFindCard(sfWebRequest $request)
+  {
+  	$searchedText = $request->getParameter('searchBox');
+    
+    $this->cards = Doctrine::getTable('Card')
+      ->createQuery('c')
+      ->where('c.namespanish like %?%',$searchedText)
+      ->orWhere('c.nameenglish like %?%',$searchedText)
+      ->execute();
   }
 
   public function executeNew(sfWebRequest $request)

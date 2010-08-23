@@ -1,7 +1,7 @@
-<h1>Set List ()</h1>
+<h1>Set List</h1>
 
 <div id="cards">
-<table cellspacing="0" cellpadding="1" border="0" align="center" width="100%">
+<table cellspacing="0" cellpadding="1" border="0" align="left" width="600">
           <tbody><tr>
           
              <td class="editionShortcut" align="center">
@@ -38,13 +38,13 @@
           <tr>
 
             <td class="editionShortcut" align="center">
-                <a href="mtg_search_result.php?edition=Zendikar" class="opacityit">
+                <a href="<?php echo url_for('card/index?expansion=ZEN') ?>" class="opacityit">
                 <img src="/images/editions/logo_zendikar.jpg" alt="" width="150" border="0" height="100"></a>
                 <br><br>
-                <a href="mtg_search_result.php?edition=Zendikar&amp;rarity=Mythic+Rare" class="opacityit"><img src="/images/editions/exp_sym_ZEN_M.gif" alt="ZEN M"></a>
-                <a href="mtg_search_result.php?edition=Zendikar&amp;rarity=Rare" class="opacityit"><img src="/images/editions/exp_sym_ZEN_R.gif" alt="ZEN R"></a>
-                <a href="mtg_search_result.php?edition=Zendikar&amp;rarity=Uncommon" class="opacityit"><img src="/images/editions/exp_sym_ZEN_U.gif" alt="ZEN U"></a>
-                <a href="mtg_search_result.php?edition=Zendikar&amp;rarity=Common" class="opacityit"><img src="/images/editions/exp_sym_ZEN_C.gif" alt="ZEN C"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Mythic') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_M.gif" alt="ZEN M"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Rare') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_R.gif" alt="ZEN R"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Uncommon') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_U.gif" alt="ZEN U"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Common') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_C.gif" alt="ZEN C"></a>
             </td>
 
              <td class="editionShortcut" align="center">
