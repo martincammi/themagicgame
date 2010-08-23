@@ -13,6 +13,7 @@ Doctrine_Manager::getInstance()->bindComponent('Card', 'doctrine');
  * @property integer $cost
  * @property integer $cardid
  * @property string $state
+ * @property string $rarity
  * @property integer $stock
  * @property integer $idexpansion
  * @property integer $iddetails
@@ -25,6 +26,7 @@ Doctrine_Manager::getInstance()->bindComponent('Card', 'doctrine');
  * @method integer             getCost()        Returns the current record's "cost" value
  * @method integer             getCardid()      Returns the current record's "cardid" value
  * @method string              getState()       Returns the current record's "state" value
+ * @method string              getRarity()      Returns the current record's "rarity" value
  * @method integer             getStock()       Returns the current record's "stock" value
  * @method integer             getIdexpansion() Returns the current record's "idexpansion" value
  * @method integer             getIddetails()   Returns the current record's "iddetails" value
@@ -36,6 +38,7 @@ Doctrine_Manager::getInstance()->bindComponent('Card', 'doctrine');
  * @method Card                setCost()        Sets the current record's "cost" value
  * @method Card                setCardid()      Sets the current record's "cardid" value
  * @method Card                setState()       Sets the current record's "state" value
+ * @method Card                setRarity()      Sets the current record's "rarity" value
  * @method Card                setStock()       Sets the current record's "stock" value
  * @method Card                setIdexpansion() Sets the current record's "idexpansion" value
  * @method Card                setIddetails()   Sets the current record's "iddetails" value
@@ -106,6 +109,15 @@ abstract class BaseCard extends sfDoctrineRecord
              'notnull' => false,
              'autoincrement' => false,
              'length' => '',
+             ));
+        $this->hasColumn('rarity', 'string', 10, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 10,
              ));
         $this->hasColumn('stock', 'integer', 4, array(
              'type' => 'integer',
