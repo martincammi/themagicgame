@@ -1,5 +1,5 @@
 @charset "utf-8";
-#body		{background-image:url(../imagenes/bg.jpg);background-color: #000000;background-repeat: no-repeat;margin: 0px;padding: 0px;}
+
 .clear 		{clear:both;}
 .ft  		{width:138px;height:112px;float:left;margin-right: 17px;border: 1px solid #000000;}
 .ft2 		{width:100px;height:80px;float:left;margin-right: 17px;}

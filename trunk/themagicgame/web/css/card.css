@@ -13,16 +13,14 @@
   color: #fff;
 }
 
-#card h3
-{
+#card h3{
   font-size: 150%;
-  margin: 15px 10px;
-  padding: 10px 0;
+  margin: 0px 5px 0px 20px; 
+  padding: 5px 0;
   font-weight: bold;
 }
 
-#card h3 small
-{
+#card h3 small{
   font-size: 70%;
   color: #5d6162;
 }
@@ -103,31 +101,54 @@
   color: red;
 }
 
+.cardDescription {
+	width: 660px;
+	height: 400px;
+}
+
+#card .cardName{
+  font-size: 110%;
+  margin: 5px 10px 7px;
+  font-weight: bold;
+  padding-top: 5px;
+  color: #1d8cba;
+}
+
+#card .cardDetails{
+	#background:none repeat scroll 0 0 #021D38;
+	#opacity: 0.6;
+	background-color:rgba(2,29,56,0.6);
+	margin-left:270px;
+	height:341px;
+}
+
 .row {
 	margin:5px 0px;
 }
 
 .formLabel {
-	color:#333333;
+	color:#6483A2;
 	float:left;
 	font-size:12px;
 	text-align:left;
 	width:100px;
 	margin-right: 3px;
+	padding-left: 10px;
 }
 
 .formData {
-	color:#333333;
+	color:#6483A2;
 	font-size:12px;
-	margin-left:180px;
+	margin-left:100px;
 	text-align:left;
-	clear: right;
+	margin-right: 3px;
+	font-weight: bold;
 }
 
 .formCost {
-	color:navy;
-	font-size:15px;
-	margin-left:180px;
+	color:#82a6cb;
+	font-size:12px;
+	margin-left:100px;
 	text-align:left;
 	clear: right;
 	font-weight: bold;

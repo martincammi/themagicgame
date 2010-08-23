@@ -17,31 +17,26 @@
 }
 
 .cards tr.even{
-  background:none repeat scroll 0 0 #021D38; 
-  opacity:0.6;
+  /*background:none repeat scroll 0 0 #021D38; 
+  opacity:0.6;*/
+  background-color:rgba(2,29,56,0.6);
 }
 
 .cards tr.odd{
-  background:none repeat scroll 0 0 #021D38; 
-  opacity:0.4;
+  /*background:none repeat scroll 0 0 #021D38; 
+  opacity:0.4;*/
+  background-color:rgba(2,29,56,0.4);
 }
 
 .cards td{
   padding: 5px 15px;
   border-bottom: 1px dotted #999;
+  
 }
 
 .cards td.default,
-.cards td.cardName
-{
+.cards td.cardName{
   border-right: 1px dotted #999;
-}
-
-.cards .cardName
-{
-  color: #524F46;
-  font-weight: bold;
-  width: 30%;
 }
 
 .cards .title
@@ -89,12 +84,12 @@
 }
 
 .cardName a {
-	color: #5340b3;
-	opacity:100!important;
+	color: #24a0d4;
 	font-size: 13px;
 	height: 20px;
 	line-height: 20px;
 	padding-left: 10px;
+	font-weight: bold;
 }
 
 .more_cards

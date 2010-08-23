@@ -223,6 +223,15 @@ textarea, input,textarea:focus, input:focus{ outline:none;}
 	display: block;
 }
 
+.btn-search {
+	width: 94px;
+	height: 42px;
+	background: url('../images/buscador/btn-buscar.png') no-repeat;
+	background-position: 0 0;
+	margin-left: 10px;
+	display: block;
+}
+
 .buscar input {
 	outline: none!important;
 }
