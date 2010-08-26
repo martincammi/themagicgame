@@ -33,7 +33,7 @@ function submitMe(){
 
 			<div class="search clearfix">
 				<div class="search-box">
-					<form class="clearfix" id="search-box" style="padding:0;margin:0" action="/frontend_dev.php/card/index" method="get" onsubmit="window.search.onsubmit()">
+					<form class="clearfix" id="search-box" style="padding:0;margin:0" action="<?php echo url_for('/card/index') ?>" method="get" onsubmit="window.search.onsubmit()">
 						<div class="input-left"></div>			
 						<input type="text" class="sinput" id="searchBox" >
 						<div class="input-right"></div>
@@ -41,24 +41,16 @@ function submitMe(){
 							<a href="algo"></a>
 						</div>
 					</form>
-					<ul class="search-btn-option">
-						<li><a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">M10</a>
-					</li>
-					<li>
-							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">Zendikar</a>
-					</li>
-					<li>
-							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">WorldWake</a>
-					</li>
-					<li>
-							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">Rise of Eldrazi</a>
-					</li>
-					<li>
-							<a onclick="window.search.filterSearch_show(); return false" class="search-btn-option">M11</a>
-					</li>
-					<script type="text/javascript">$('searchBoxform[name="search"] input[name="search"]').focus();</script>
-					<div class="clearBoth"></div>
-				</ul>
+					
+					<div id="div1" class="search-btn-option">
+						M10
+					</div>
+					<div id="separador">&nbsp;</div>
+					<div id="div2" class="search-btn-option">
+						M11
+					</div>
+				</div>
+
 			</div>
 		
 		</div>
