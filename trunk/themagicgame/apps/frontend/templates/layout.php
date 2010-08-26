@@ -24,6 +24,7 @@
 			<a href="<?php echo url_for('card/index?expansion=ZEN') ?>" class="menu">Zendikar</a>
 			<a href="<?php echo url_for('card/index?expansion=M10') ?>" class="menu">M10</a>
 			<a href="" class="menu">Bajo encargo</a>
+			<a href="" class="menu">Combos</a>
 		</div>
 		<div class="clear"></div>
 	</div>

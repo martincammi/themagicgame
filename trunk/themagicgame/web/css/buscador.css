@@ -356,3 +356,7 @@ background: url(../images/buscador/logo-p.png) no-repeat scroll left top transpa
 background:url(../images/buscador/logos-home-p.png) no-repeat scroll 0 0 transparent!important;
 }
 
+#div1 {float: left;  padding-left: 10px; position: relative; }
+#div2 {float: left;  padding-left: 10px; position: relative; }
+
+#separador{ float: left; width: 5px; position: relative; bottom:-33px;}
