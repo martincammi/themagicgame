@@ -22,6 +22,12 @@
 /* Estructura ****************************************/
 #cn 		{width: 897px;margin-right: auto;margin-left: auto;padding-left: 10px;background-image: url(../imagenes/bg-md.png);padding-top: 10px;padding-right: 10px;margin-bottom:20px;}
 #bn 		{height: 120px;margin-right: auto;margin-left: auto;text-align: center;padding-right: 5px;}
+
+#newContainer{
+	width: 600px;
+	margin:0 auto 0 auto;
+}
+
 #m1 		{width: 220px;float:left;}
 #m2 		{width: 649px;float:right;padding-left:20px;}
 #m3 		{width:320px;float:left;padding-right:9px;}
