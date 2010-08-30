@@ -27,6 +27,8 @@ a { cursor: pointer }
 	background-color: #021D38!important;
 	border-bottom:1px solid #6483a2 !important;
 	border-top:1px solid #6483a2 !important;
+	border-right:#6483a2 1px solid !important;
+	border-left:#6483a2 1px solid !important;
 }
 
 #wrapper ul.search-options li.active a {
@@ -60,7 +62,7 @@ a { cursor: pointer }
 }
 
 .taringa-search .search-box {
-	width: 610px;
+	width: 350px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -99,7 +101,7 @@ form {
 	
 	background:none repeat scroll 0 0 #021D38;
 	
-	bottom:-33px;
+	bottom:-16px;
 	color:#FFFFFF;
 	display:block;
 	font-size:11px;
@@ -153,26 +155,10 @@ ul.search-options  li a {
 	opacity: 1;
 }
 
-#header .tab-search.iconos16.tab-web span {background-position: 0 -1px;}
-#header .tab-search.iconos16.tab-posts span {background-position: 0 -18px;}
-#header .tab-search.iconos16.tab-comunidades span {background-position: 0 -35px;}
-#header .tab-search.iconos16.tab-empleos span {background-position: 0 -52px;}
-
-#header .tab-search.iconos16.selected.tab-web span {background-position: -17px -1px;}
-
-#header .tab-search.iconos16.selected.tab-posts span {background-position: -17px -18px;}
-#header .tab-search.iconos16.selected.tab-comunidades span {background-position: -17px -35px;}
-#header .tab-search.iconos16.selected.tab-empleos span {background-position: -17px -53px;}
-
-#header .tab-search.iconos16.tab-home span {background: url('../images/buscador/home.png') no-repeat 0 0;}
-#header .tab-search.iconos16.tab-home a {background: #000}
-
-
-.iconos16.icon-expand {display:none}
 #header .search,.taringa-search .search {
 background:  url('../images/buscador/bg-search.png') repeat-x top left;
 background-color: #479ae0;
-padding:8px 0;
+padding:15px;
 -moz-box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.4);
 -webkit-box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.4);
 box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.4);
@@ -202,9 +188,20 @@ top: -2px;
 
 textarea, input,textarea:focus, input:focus{ outline:none;}
 
+/*
 
-#header .search .search-box .input-left,#header .search .search-box input,#header .search .search-box .input-right,
-.taringa-search .search .search-box .input-left,.taringa-search .search .search-box input,.taringa-search .search .input-right  {
+#header .search .search-box .input-left,
+#header .search .search-box input,
+#header .search .search-box .input-right,
+.taringa-search .search .search-box .input-left,
+.taringa-search .search .search-box input,
+.taringa-search .search .input-right {
+*/
+
+
+.taringa-search .search .search-box .input-left,
+.taringa-search .search .search-box .search-input,
+.taringa-search .search .input-right {
 	height: 26px;
 	float: left;
 	display: block;
@@ -214,30 +211,32 @@ textarea, input,textarea:focus, input:focus{ outline:none;}
 	outline: none!important;
 }
 
+/*Link del boton search*/
 .btn-search a {
-	width: 94px;
-	height: 42px;
-	background: url('../images/buscador/btn-buscar.png') no-repeat;
-	background-position: 0 0;
+	width: 70px;
+	height: 32px;
+	background: url('../images/buscador/btn-buscar.png') no-repeat scroll 10 0;
+	background-position: 10 0;
 	margin-left: 10px;
 	display: block;
 }
 
+/*div del boton search*/
 .btn-search {
-	width: 94px;
-	height: 42px;
+	width: 70px;
+	height: 32px;
 	background: url('../images/buscador/btn-buscar.png') no-repeat;
 	background-position: 0 0;
 	margin-left: 10px;
 	display: block;
 }
-
+/*BORRAR
 .buscar input {
 	outline: none!important;
-}
+}*/
 
 .btn-search a:hover {
-	background-position: 0 -43px;
+	background-position: 0 -30px;
 }
 
 .btn-search a:active {
@@ -245,15 +244,15 @@ textarea, input,textarea:focus, input:focus{ outline:none;}
 }
 
 #header .search .search-box .input-left, .taringa-search .search .search-box .input-left {
-	width: 40px;
+	width: 10px;
 	background: url(../images/buscador/input_left.png) top left no-repeat;
 }
-
+/* BORRAR
 #header .search .search-box input,.taringa-search .search .search-box input {
-	width: 450px;
+	width: 250px;
 	background: url(../images/buscador/input.png) top left repeat-x;
 	font-family: Helvetica, Arial;\
-}
+}*/
 
 #header .search .search-box .input-right,.taringa-search .search .search-box .input-right{
 	width: 10px;
@@ -290,9 +289,12 @@ zoom: 1;
 	color: #000;	
 }
 
-.taringa-search .sinput {
+.taringa-search .search-input {
 	border: 1px solid #b40701;
 	border-right: 0 none;
+	width: 250px;
+	background: url(../images/buscador/input.png) top left repeat-x;
+	font-family: Helvetica, Arial;\
 }
 
 .taringa-search h1 a  {
@@ -317,6 +319,7 @@ width:196px!important;
 
 /* Mini Buscador */
 
+/* BORRAR
 .taringa-search-min .sinput {
 	border: 1px solid #b40701;
 	border-right: 0 none;
@@ -347,6 +350,8 @@ width:196px!important;
 		border-bottom: 1px solid #793030;
 	
 }
+
+*/
 
 #header #logo a {
 background: url(../images/buscador/logo-p.png) no-repeat scroll left top transparent!important;
