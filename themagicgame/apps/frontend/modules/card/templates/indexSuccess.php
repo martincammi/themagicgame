@@ -1,4 +1,4 @@
-<h1>Cards List - <?php echo $expansion->getName(); ?></h1>
+<h1>Cards List <?php echo '- '.$expansionName; ?></h1>
 
 <div id="cards">
 <table class="cards">

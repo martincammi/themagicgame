@@ -12,23 +12,24 @@ class cardActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-  	$searchedText = $request->getParameter('searchBox');
-  	$searchedText = 'a';
   	$this->searchedText = $request->getParameter('searchBox');
-  	/*if($searchedText != null || $searchedText != ''){
+  	$searchedText = $this->searchedText;
+  	if($searchedText != null || $searchedText != ''){
     
     	$this->cards = Doctrine::getTable('Card')
       		->createQuery('c')
       		->where('c.namespanish like ?','%'.$searchedText.'%')
       		->orWhere('c.nameenglish like ?','%'.$searchedText.'%')
       		->execute();
-  	}else{*/
+      		
+      	$this->expansionName = ''; 
+  	}else{
   		
 	  	$abbreviationName = $request->getParameter('expansion');
 	  	$rarity = $request->getParameter('rarity');
 	  	
 	  	$expansion = Doctrine::getTable('Expansion')->findByAbbreviation(array($abbreviationName));
-	  	$this->expansion = $expansion[0];
+	  	$this->expansionName = $expansion[0]->getName();
 	  	
 	  	$Idexpansion = $expansion[0]->getId();
 	  	
@@ -36,17 +37,18 @@ class cardActions extends sfActions
 	      ->createQuery('c')
 	      ->where('c.idExpansion = ?',$Idexpansion)
 	      ->execute();
-  	/*}*/
+  	}
   }
 
   
   public function executeShow(sfWebRequest $request)
   {
-  	$this->card = CardTable::loadCard($request->getParameter('id'));
-    $this->forward404Unless($this->card);
-    $this->expansion = Doctrine::getTable('Expansion')->find(array($this->card->getIdexpansion()));
+  	//$this->card = CardTable::loadCard($request->getParameter('id'));
+  	$card = Doctrine::getTable('Card')->findById(array($request->getParameter('id')));
+    $this->card = $card[0]; 
+  	$this->forward404Unless($this->card);
     
-    //$this->previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()));
+    $this->previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()));
     $previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()-1));
     $this->previousCard = $previousCard[0];
 

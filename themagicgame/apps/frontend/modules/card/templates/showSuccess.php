@@ -14,7 +14,7 @@
   <h2>
   	&nbsp;
   	<a href="<?php echo url_for('card/show?id='.$nextCard->getId()) ?>">
-  		<?php echo $nextCard->getNameenglish() ?>
+  		<?php echo $nextCard->getNameEnglish() ?>
   	</a>	
   </h2>
   
@@ -27,7 +27,7 @@
 	  <div class="image">
 	     <a href="<?php echo url_for('card/index?expansion='.$card->getExpansion()->getAbbreviation()) ?>">
 	       <img class="imageProp" src="/images/cards/<?php echo $card->getExpansion()->getAbbreviation() ?>/<?php echo $card->getCardid() ?>.jpg"
-	         alt="<?php echo $expansion->getName() ?>" />
+	         alt="<?php echo $card->getExpansion() ?>" />
 	     </a>
 	   </div>
 	   
