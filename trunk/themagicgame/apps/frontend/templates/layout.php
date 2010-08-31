@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<title>The Time of Game - Magic Cards</title>
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/images/cardback.jpg" />
 		
 		<?php include_javascripts() ?>
 		<?php include_stylesheets() ?>
