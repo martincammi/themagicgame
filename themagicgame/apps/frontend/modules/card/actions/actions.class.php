@@ -29,14 +29,17 @@ class cardActions extends sfActions
 	  	$rarity = $request->getParameter('rarity');
 	  	
 	  	$expansion = Doctrine::getTable('Expansion')->findByAbbreviation(array($abbreviationName));
+	  	$Idexpansion = $expansion[0]->getId();
 	  	$this->expansionName = $expansion[0]->getName();
 	  	
-	  	$Idexpansion = $expansion[0]->getId();
-	  	
-	    $this->cards = Doctrine::getTable('Card')
-	      ->createQuery('c')
-	      ->where('c.idExpansion = ?',$Idexpansion)
-	      ->execute();
+	  	if($rarity != null || $rarity != ''){
+	  		$this->cards = Doctrine::getTable('Card')->findByExpansionAndRarity($rarity,$Idexpansion);
+	  	}else{
+	  		$this->cards = Doctrine::getTable('Card')
+	      		->createQuery('c')
+	      		->where('c.idExpansion = ?',$Idexpansion)
+	      		->execute();	
+	  	}
   	}
   }
 
@@ -52,8 +55,11 @@ class cardActions extends sfActions
     $previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()-1));
     $this->previousCard = $previousCard[0];
 
-    $nextCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()+1));
-    $this->nextCard = $nextCard[0]; 
+    //$nextCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()+1));
+    //$this->nextCard = $nextCard[0]; 
+    
+    $nextCard = Doctrine::getTable('Card')->findByCardIdAndExpansion($this->card->getCardid()+1,$this->card->getIdExpansion());
+    $this->nextCard = $nextCard[0];
     
     //$doctrine_query = Doctrine::getTable('Card')->createQuery('c')->where('c.cardid = ?', '$this->card->getICardid()');
     //$array_cards = $doctrine_query->fetchArray();

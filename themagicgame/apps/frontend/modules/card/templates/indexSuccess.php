@@ -6,7 +6,7 @@
     <td>Carta</td>
     <td>Precio</td>
     <td>Stock</td>
-  	<td>Idexpansion</td>
+    <td>Rarity</td>
   </tr>
   <tbody>
     <?php foreach ($cards as $i => $card): ?>
@@ -14,15 +14,23 @@
 	      <td class="cardName">
 			<a href="<?php echo url_for('card/show?id='.$card->getId()) ?>">
 			<?php echo $card->getNameenglish() ?>
-			<?php if($card->getState() != 'ok'){
+			<?php if($card->getState() != 'NM'){
 				  echo ' ('.$card->getState().')' ;
                  	      }
 			?>
 	      </td>
 	      <td class="data">$ <?php echo $card->getCost() ?></td>
 	      <td class="data"><?php echo $card->getStock() ?></td>
-	      <td class="data"><?php echo $card->getIdexpansion() ?></td>
 	      
+		  <?php if ($card->getRarity() == 'Uncommon'){ ?>
+		  	<td class="data">
+		  		<img src="/images/editions/exp_sym_M11_U.gif" alt="M11 U">
+		  	</td>
+		  <?php }else{ ?>
+		  	<td class="data">
+		  		<?php echo $card->getRarity() ?>
+		  	</td>
+		  <?php } ?>
       </tr>
     <?php endforeach; ?>
   </tbody>
