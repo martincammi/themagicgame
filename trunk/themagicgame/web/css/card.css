@@ -1,17 +1,80 @@
-#card h1
-{
 
+.previousCard{
+  margin-top: 3px;
+  font-size: 110%;
+  font-style: italic;
+  padding: 5px 20px;
+  float: left;
+  color: #fff;
 }
 
-#card h2
-{
+.previousCard a{
+  color: #fff;
+}
+
+.expansionTitle{
   margin-top: -30px;
+  font-size: 110%;
+  font-style: italic;
+  padding: 5px 20px;
+  float: left;
+  color: #fff;
+}
+
+.nextCard{
+  margin-top: 3px;
   font-size: 110%;
   font-style: italic;
   padding: 5px 20px;
   float: right;
   color: #fff;
 }
+
+.nextCard a{
+  color: #fff;
+}
+
+#card .barTitle
+{
+	background-color: #021D38!important;
+	
+	border-bottom:1px solid #6483a2 !important;
+	border-top:1px solid #6483a2 !important;
+	border-right:#6483a2 1px solid !important;
+	border-left:#6483a2 1px solid !important;
+	
+  
+  margin-top: 10px;
+  /*margin-bottom: 1px;*/
+  padding: 0px 15px;
+  font-size: 100%;
+  font-weight: bold;
+  height: 35px;
+  width: 630px;
+  /*text-transform: uppercase;*/
+  
+  background:#479AE0 url(../images/buscador/bg-search.png) repeat-x scroll left top;
+	/*
+	border-bottom:1px solid #11478C;
+	border-top:1px solid #11478C;
+	padding:15px;
+	position:relative;
+	top:-2px;
+  
+  background: url(../images/bg-listheader.png) repeat-x ;
+  #opacity: 0.1;
+  background-color: #021D38!important;
+  border-bottom:1px solid #6483a2;
+  border-top:1px solid #6483a2;
+  border-right:1px solid #6483a2;
+  border-left:1px solid #6483a2;
+  line-height: 32px;
+  #color: #fff;
+  */
+  
+}
+
+
 
 #card h3{
   font-size: 150%;
@@ -146,8 +209,8 @@
 }
 
 .formCost {
-	color:#82a6cb;
-	font-size:12px;
+	color:#995110;
+	font-size:15px;
 	margin-left:100px;
 	text-align:left;
 	clear: right;

@@ -60,7 +60,14 @@
 .cards .data
 {
   color: #d2813f;
-  width: 30%;
+  width: 15%;
+  text-align: center;
+}
+
+.cards .expansion
+{
+  color: #d2813f;
+  width: 20%;
   text-align: center;
 }
 

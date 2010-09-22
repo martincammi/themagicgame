@@ -18,4 +18,26 @@ class CardTable extends Doctrine_Table
 	    
 	    return $card;  
 	}
+	
+	public static function findByCardIdAndExpansion($cardId, $expansionId){
+	  	
+	    $aCard = Doctrine::getTable('Card')
+      ->createQuery('c')
+      ->where('c.cardId = ?',$cardId)
+      ->andWhere('c.Idexpansion = ?',$expansionId)
+      ->execute();
+	    
+	   return $aCard;  
+	}
+	
+	public static function findByExpansionAndRarity($rarity, $expansionId){
+	  	
+	    $cards = Doctrine::getTable('Card')
+      ->createQuery('c')
+      ->where('c.rarity = ?',$rarity)
+      ->andWhere('c.Idexpansion = ?',$expansionId)
+      ->execute();
+	    
+	   return $cards;  
+	}
 }
