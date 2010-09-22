@@ -3,20 +3,25 @@
 <?php use_helper('Text') ?>
  
 <div id="card">
-  <h1>
-  &nbsp;
-  <a href="<?php echo url_for('card/show?id='.$previousCard->getId()) ?>">
-  	   <?php echo $previousCard->getNameenglish() ?>
-  </a>
-  Todas las cartas
-  </h1>
+
+  <div class="barTitle">
+   
+   	<div class="previousCard">
+  		<a href="<?php echo url_for('card/show?id='.$previousCard->getId()) ?>">
+  	   		<?php echo $previousCard->getNameenglish() ?>
+  		</a>
+  	</div>
   
-  <h2>
-  	&nbsp;
-  	<a href="<?php echo url_for('card/show?id='.$nextCard->getId()) ?>">
-  		<?php echo $nextCard->getNameEnglish() ?>
-  	</a>	
-  </h2>
+  	<div class="expansionTitle">    
+		<!-- none by now -->
+  	</div>
+  
+  	<div class="nextCard">
+	  	<a href="<?php echo url_for('card/show?id='.$nextCard->getId()) ?>">
+  			<?php echo $nextCard->getNameEnglish() ?>
+  		</a>	
+  	</div>
+  </div>
   
   <h3>
     <?php echo $card->getNameEnglish() ?>
@@ -37,6 +42,13 @@
 	  	   </div>
 	  	   
 	  	   <div class="row">
+	  	   		<div class="formLabel">Precio:</div>
+	  			<div class="formCost">
+	  	  			$<?php echo $card->getCost() ?>
+	  			</div>
+	  	   </div>
+	  	   
+	  	   <div class="row">
 	  	   		<div class="formLabel">Set:</div>
 	  			<div class="formData">
 	  	  			<?php echo $card->getExpansion()->getName() ?>
@@ -47,13 +59,6 @@
 	  	   		<div class="formLabel">Rarity:</div>
 	  			<div class="formData">
 	  	  			<?php echo $card->getRarity() ?>
-	  			</div>
-	  		</div>
-	  		
-	  		<div class="row">
-	  	   		<div class="formLabel">Precio:</div>
-	  			<div class="formCost">
-	  	  			$<?php echo $card->getCost() ?>
 	  			</div>
 	  		</div>
 	  		

@@ -8,10 +8,10 @@
                 <a href="<?php echo url_for('card/index?expansion=M11') ?>" class="opacityit">
                 	<img src="/images/editions/logo_2011CoreSet.gif" alt="" width="150" border="0" height="51"></a>
                 <br><br>
-                <a href="<?php echo url_for('card/index?expansion=M11&amp;rarity=Mythic') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_M.gif" alt="M11 M"></a>
-                <a href="<?php echo url_for('card/index?expansion=M11&amp;rarity=Rare') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_R.gif" alt="M11 R"></a>
-                <a href="<?php echo url_for('card/index?expansion=M11&amp;rarity=Uncommon') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_U.gif" alt="M11 U"></a>
-                <a href="<?php echo url_for('card/index?expansion=M11&amp;rarity=Common') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_C.gif" alt="M11 C"></a>
+                <a href="<?php echo url_for('card/index?expansion=M11&rarity=Mythic') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_M.gif" alt="M11 M"></a>
+                <a href="<?php echo url_for('card/index?expansion=M11&rarity=Rare') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_R.gif" alt="M11 R"></a>
+                <a href="<?php echo url_for('card/index?expansion=M11&rarity=Uncommon') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_U.gif" alt="M11 U"></a>
+                <a href="<?php echo url_for('card/index?expansion=M11&rarity=Common') ?>" class="opacityit"><img src="/images/editions/exp_sym_M11_C.gif" alt="M11 C"></a>
              </td>
           
             <td class="editionShortcut" align="center">
@@ -41,10 +41,10 @@
                 <a href="<?php echo url_for('card/index?expansion=ZEN') ?>" class="opacityit">
                 <img src="/images/editions/logo_zendikar.jpg" alt="" width="150" border="0" height="100"></a>
                 <br><br>
-                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Mythic') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_M.gif" alt="ZEN M"></a>
-                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Rare') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_R.gif" alt="ZEN R"></a>
-                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Uncommon') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_U.gif" alt="ZEN U"></a>
-                <a href="<?php echo url_for('card/index?expansion=ZEN&amp;rarity=Common') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_C.gif" alt="ZEN C"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amprarity=Mythic') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_M.gif" alt="ZEN M"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amprarity=Rare') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_R.gif" alt="ZEN R"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amprarity=Uncommon') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_U.gif" alt="ZEN U"></a>
+                <a href="<?php echo url_for('card/index?expansion=ZEN&amprarity=Common') ?>" class="opacityit"><img src="/images/editions/exp_sym_ZEN_C.gif" alt="ZEN C"></a>
             </td>
 
              <td class="editionShortcut" align="center">
