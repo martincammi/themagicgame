@@ -31,7 +31,7 @@ function submitSearch(){
 		<div class="taringa-search">
 			<div class="taringa-bar">
 				<ul class="search-options"  style="height:27px;	margin:0 auto;	padding:0;	width:610px;">
-					<li class="active"><a href="<?php echo url_for('/') ?>" onclick="changeTab( this);">Home</a></li>
+					<li class="active"><a href="<?php echo url_for('/frontend_dev.php/') ?>" onclick="changeTab( this);">Home</a></li>
 					<li><a href="" onclick="changeTab(this); return false">Listados</a></li>
 					<li><a href="" onclick="changeTab(this); return false">Sets</a></li>
 					<li id="logo"></li>
@@ -43,7 +43,7 @@ function submitSearch(){
 					<form class="clearfix" id="search-box-form" style="padding:0;margin:0" action="<?php echo url_for('/card/index') ?>" method="get">
 						<div class="input-left"></div>
 						<div id="pepe">
-							<input id="searchBox" name="searchBox" type="text" class="search-input" value="vamp"/>
+							<input id="searchBox" name="searchBox" type="text" class="search-input" value=""/>
 						</div>
 						<div class="input-right"></div>
 						<div class="btn-search floatL">
