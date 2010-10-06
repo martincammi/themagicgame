@@ -4,6 +4,7 @@
 <table class="cards">
   <tr class="title">
     <td>Carta</td>
+    <td>Edit</td>
     <td>Precio</td>
     <td>Stock</td>
     <td>Rarity</td>
@@ -19,18 +20,20 @@
                  	      }
 			?>
 	      </td>
+	      <td>
+	      	<a href="<?php echo url_for('card/edit?id='.$card->getId()) ?>">Edit
+    		</a></td>
 	      <td class="data">$ <?php echo $card->getCost() ?></td>
 	      <td class="data"><?php echo $card->getStock() ?></td>
 	      
-		  <?php if ($card->getRarity() == 'Uncommon'){ ?>
-		  	<td class="data">
-		  		<img src="/images/editions/exp_sym_M11_U.gif" alt="M11 U">
-		  	</td>
-		  <?php }else{ ?>
-		  	<td class="data">
-		  		<?php echo $card->getRarity() ?>
-		  	</td>
-		  <?php } ?>
+			<?php
+				$abb = $card->getExpansion()->getAbbreviation();
+				$rarity = $card->getRarity();
+			?>
+	      
+		  <td class="data">
+		  	<img src="/images/editions/exp_sym_<?php echo $abb ?>_<?php echo $rarity ?>.gif" alt="<?php echo $abb ?> <?php echo $rarity ?>">
+		  </td>
       </tr>
     <?php endforeach; ?>
   </tbody>

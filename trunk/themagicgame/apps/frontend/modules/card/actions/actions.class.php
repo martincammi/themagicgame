@@ -51,10 +51,13 @@ class cardActions extends sfActions
     $this->card = $card[0]; 
   	$this->forward404Unless($this->card);
     
-    $this->previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()));
-    $previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()-1));
+    //$this->previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()));
+    //$previousCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()-1));
+    //$this->previousCard = $previousCard[0];
+	$previousCard = Doctrine::getTable('Card')->findByCardIdAndExpansion($this->card->getCardid()-1,$this->card->getIdExpansion());
     $this->previousCard = $previousCard[0];
-
+  	
+  	
     //$nextCard = Doctrine::getTable('Card')->findByCardid(array($this->card->getCardid()+1));
     //$this->nextCard = $nextCard[0]; 
     
