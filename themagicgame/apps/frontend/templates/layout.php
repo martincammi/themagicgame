@@ -4,7 +4,12 @@
 	<head>
 		<title>The Time of Game - Magic Cards</title>
 		<link rel="shortcut icon" href="/images/cardback.jpg" />
-		
+		<?php include_http_metas() ?>
+   	    <?php include_metas() ?>
+        <?php include_title() ?>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <?php include_stylesheets() ?>
+        <?php include_javascripts() ?>
 		<?php include_javascripts() ?>
 		<?php include_stylesheets() ?>
 	</head>
@@ -16,23 +21,26 @@
 		</div>
 		
 		<div id="cn">
-			<div id="m1"><!--reportes-->
+
+			
+			<div id="m1">
 				<div class="tl" id="con">Cartas</div>
-		<div id="bx">
-			<div class="menu">
-				<a href="<?php echo url_for('card/index?expansion=M11') ?>" class="menu">M11</a>
-				<a href="<?php echo url_for('card/index?expansion=ROE') ?>" class="menu">Rise of Eldrazi</a>
-				<a href="<?php echo url_for('card/index?expansion=WWK') ?>" class="menu">Worldwake</a>
-				<a href="<?php echo url_for('card/index?expansion=ZEN') ?>" class="menu">Zendikar</a>
-				<a href="<?php echo url_for('card/index?expansion=M10') ?>" class="menu">M10</a>
-				<a href="" class="menu">Bajo encargo</a>
-				<a href="" class="menu">Combos</a>
-				<a href="" class="menu">Packs de cartas</a>
-				<a href="" class="menu">Boosters</a>
-				<a href="" class="menu">Boosters Box</a>
+			<div id="bx">
+				<div class="menu">
+					<a href="<?php echo url_for('card/index?expansion=SOM') ?>" class="menu">Scars of Mirrodin</a>
+					<a href="<?php echo url_for('card/index?expansion=ROE') ?>" class="menu">Rise of Eldrazi</a>
+					<a href="<?php echo url_for('card/index?expansion=WWK') ?>" class="menu">Worldwake</a>
+					<a href="<?php echo url_for('card/index?expansion=ZEN') ?>" class="menu">Zendikar</a>
+					<a href="<?php echo url_for('card/index?expansion=M11') ?>" class="menu">M11</a>
+					<a href="<?php echo url_for('card/index?expansion=M10') ?>" class="menu">M10</a>
+					<a href="" class="menu">Bajo encargo</a>
+					<a href="" class="menu">Combos</a>
+					<a href="" class="menu">Packs de cartas</a>
+					<a href="" class="menu">Boosters</a>
+					<a href="" class="menu">Boosters Box</a>
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="clear"></div>
-		</div>
 		
 		<div style="padding-bottom: 10px;"><img src="imagenes/bt-bx.png"></div>
 		
