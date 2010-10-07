@@ -1,0 +1,3 @@
+<td colspan="10">
+  <?php echo __('%%id%% - %%namespanish%% - %%nameenglish%% - %%cost%% - %%cardid%% - %%state%% - %%rarity%% - %%stock%% - %%idexpansion%% - %%iddetails%%', array('%%id%%' => link_to($card->getId(), 'card_edit', $card), '%%namespanish%%' => $card->getNamespanish(), '%%nameenglish%%' => $card->getNameenglish(), '%%cost%%' => $card->getCost(), '%%cardid%%' => $card->getCardid(), '%%state%%' => $card->getState(), '%%rarity%%' => $card->getRarity(), '%%stock%%' => $card->getStock(), '%%idexpansion%%' => $card->getIdexpansion(), '%%iddetails%%' => $card->getIddetails()), 'messages') ?>
+</td>
